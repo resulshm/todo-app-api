@@ -46,9 +46,6 @@ const previewSchema = new Schema({
 });
 
 const Task = mongoose.model("Task", taskSchema);
-const PreviewOfTask = mongoose.model("Task", previewSchema);
+// const PreviewOfTask = mongoose.model("Task", previewSchema);
 
-module.exports = {
-  Task,
-  PreviewOfTask,
-};
+module.exports = Task;

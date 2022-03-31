@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const taskRoutes = require("./routes/taskRoutes");
 
 const app = express();
 
 const dbUrl = "mongodb://localhost:27017/mydatabase";
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 mongoose
   .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
@@ -16,4 +17,11 @@ mongoose
   )
   .catch((err) => console.log(err));
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use("/api/v1/task", taskRoutes);
+
+app.use((req, res) => {
+  res.status(404);
+});
