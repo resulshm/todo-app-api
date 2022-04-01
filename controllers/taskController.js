@@ -11,6 +11,17 @@ const addTask = async (req, res) => {
   }
 };
 
+const getTasks = async (req, res) => {
+  try {
+    const data = await Task.find();
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500);
+  }
+};
+
 module.exports = {
   addTask,
+  getTasks,
 };
