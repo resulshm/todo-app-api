@@ -21,7 +21,19 @@ const getTasks = async (req, res) => {
   }
 };
 
+const getTaskById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const data = await Task.findById(id);
+    res.status(200).json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500);
+  }
+};
+
 module.exports = {
   addTask,
   getTasks,
+  getTaskById,
 };
