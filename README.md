@@ -2,7 +2,7 @@
 
 > Simple task manager build with NodeJS and MongoDB.
 
-## Planed Featueres
+## Planed Features
 
 - Create, Update, Delete tasks;
 - Each task contains:
