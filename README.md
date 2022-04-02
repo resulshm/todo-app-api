@@ -2,7 +2,9 @@
 
 > Simple task manager build with NodeJS and MongoDB.
 
-## Planed Features
+---
+
+## Planned Features
 
 - Create, Update, Delete tasks;
 - Each task contains:
@@ -12,8 +14,12 @@
   - _deadline_;
   - _tags_ - helpful for groupping tasks;
 - Filtering tasks, for example, getting tasks with status **In progress**, with **Tutorial** tag, or expired tasks;
+- Searching by _title_;
 - User authentication;
+- Testing;
 - Dockerize the project...
+
+---
 
 ## First of all
 
@@ -26,8 +32,11 @@
 - Install dependencies: `npm install`;
 - Run `npm start`
 
+---
+
 ## API endpoints
 
 - Create new task: `POST: /api/v1/task/`
 - Get tasks list: `GET: /api/v1/task/`
 - Get task details: `GET: /api/v1/tast/:id`
+- Delete task : `DELETE: /api/v1/task/:id`
